@@ -35,8 +35,9 @@ void TerminationHandler::check_terminate_virtual_wall_collisions(const franka::R
       for (uint n_plane = 0; n_plane < planes_.size(); n_plane++) {
         double dist = planes_[n_plane].absDistance(pos);
         
+
         if (dist < dist_thresholds_[n_frame]) {
-          std::cout << "Frame " << n_frame + 1 << "is in collision with wall" << n_plane << "with distance " << dist << std::endl;
+          std::cout << "Frame " << n_frame + 1 << "is in collision with wall " << n_plane << "with distance " << dist << std::endl;
           done_ = true;
           terminated_by_virt_coll_ = true;
           break;
