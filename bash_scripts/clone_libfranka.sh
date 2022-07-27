@@ -16,7 +16,7 @@ case $firmware_version in
   ;;
 *)
   valid_version=false
-  echo "Please enter your robot's firmware version as 2, 3, or 4."
+  echo "Please enter your robot's firmware version as 2, 3, 4, or 5."
   ;;
 esac
 
